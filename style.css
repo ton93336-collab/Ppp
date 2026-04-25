@@ -1,0 +1,185 @@
+/* การตั้งค่าสีแบบพาสเทลและฟอนต์ */
+:root {
+    --bg-pink: #ffe6ea;
+    --card-pink: #fff0f5;
+    --dark-pink: #ff8da1;
+    --text-brown: #7b5151;
+    --cream: #fffdf0;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mali', cursive;
+}
+
+body {
+    background-color: var(--bg-pink);
+    /* ลายตารางพาสเทลน่ารักๆ */
+    background-image: 
+        linear-gradient(var(--white) 2px, transparent 2px),
+        linear-gradient(90deg, var(--white) 2px, transparent 2px);
+    background-size: 40px 40px;
+    color: var(--text-brown);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* ของตกแต่งลอยๆ */
+.bg-decor { position: fixed; font-size: 40px; opacity: 0.5; z-index: -1; animation: float 4s ease-in-out infinite; }
+.bg-decor-1 { top: 10%; left: 5%; }
+.bg-decor-2 { top: 50%; right: 5%; animation-delay: 1s; }
+.bg-decor-3 { bottom: 10%; left: 10%; animation-delay: 2s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* โครงสร้างหลักคล้ายๆ Carrd */
+.main-wrapper {
+    max-width: 800px;
+    width: 95%;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ---------------- Cards & Containers ---------------- */
+.header-card, .footer-card, .kawaii-box {
+    background: var(--white);
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(255, 141, 161, 0.2);
+    border: 3px solid var(--white);
+    position: relative;
+}
+
+/* ขอบลูกไม้จำลอง */
+.header-card::before, .kawaii-box::before {
+    content: "";
+    position: absolute;
+    top: -6px; left: -6px; right: -6px; bottom: -6px;
+    border: 3px dashed var(--dark-pink);
+    border-radius: 35px;
+    pointer-events: none;
+}
+
+.logo-area { text-align: center; margin-bottom: 20px; }
+.logo-area h1 { color: var(--dark-pink); font-size: 32px; text-shadow: 2px 2px 0px var(--cream); }
+.slogan { font-size: 16px; background: var(--cream); display: inline-block; padding: 5px 15px; border-radius: 20px; margin-top: 5px; }
+
+/* ---------------- Navigation (Pill buttons) ---------------- */
+.nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.nav-btn {
+    background: var(--card-pink);
+    color: var(--text-brown);
+    border: 2px solid var(--dark-pink);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.nav-btn:hover, .nav-btn.active {
+    background: var(--dark-pink);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* ---------------- SPA System ---------------- */
+.page { display: none; animation: fadeIn 0.4s ease forwards; }
+.page.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: scale(0.98); } to { opacity: 1; transform: scale(1); } }
+
+/* ---------------- Typography & Utilities ---------------- */
+.title-decor {
+    color: var(--dark-pink);
+    border-bottom: 2px dashed var(--dark-pink);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.center-text { text-align: center; }
+.mt-10 { margin-top: 10px; }
+.mt-20 { margin-top: 20px; }
+.hidden { display: none !important; }
+.bg-cream { background-color: var(--cream) !important; }
+.shop-logo { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 4px solid var(--dark-pink); margin-bottom: 15px; }
+
+/* ---------------- Content Boxes ---------------- */
+.summary-box { background: var(--card-pink); padding: 15px; border-radius: 15px; margin-bottom: 20px; font-size: 15px; }
+.rate-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+.rate-card { background: var(--white); border: 2px solid var(--dark-pink); border-radius: 20px; padding: 20px; }
+.rate-card h3 { color: var(--dark-pink); margin-bottom: 10px; font-size: 18px; }
+.rate-card ul { list-style: none; padding-left: 10px; }
+.rate-card li { margin-bottom: 5px; position: relative; padding-left: 15px; }
+.rate-card li::before { content: "🎀"; position: absolute; left: -5px; font-size: 10px; top: 4px; }
+.small-text { font-size: 13px; opacity: 0.8; margin-top: 10px; font-style: italic; }
+
+.info-list p { background: var(--card-pink); padding: 12px 20px; border-radius: 15px; margin-bottom: 10px; border-left: 5px solid var(--dark-pink); }
+
+/* ---------------- Gallery ---------------- */
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+.gallery-item { background: var(--white); border: 2px dashed var(--dark-pink); border-radius: 20px; padding: 15px; text-align: center; }
+.img-wrapper { position: relative; width: 100%; border-radius: 15px; overflow: hidden; margin-bottom: 10px; }
+.img-wrapper img { width: 100%; height: 150px; object-fit: cover; border-radius: 15px; transition: 0.3s; }
+.img-wrapper.zoom-cursor img { cursor: zoom-in; }
+.img-wrapper.zoom-cursor img:hover { transform: scale(1.05); }
+.gallery-item h4 { margin-bottom: 10px; color: var(--text-brown); }
+
+/* ---------------- Buttons ---------------- */
+.btn-link {
+    background: var(--dark-pink);
+    color: var(--white);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    text-decoration: none;
+}
+.btn-link:hover { background: var(--text-brown); }
+
+/* ---------------- Footer ---------------- */
+.footer-card { text-align: center; }
+.social-links { margin: 15px 0; }
+.social-links a { display: inline-block; margin: 0 10px; text-decoration: none; padding: 10px 20px; border-radius: 20px; font-weight: bold; color: var(--white); }
+.social-links .fb { background: #1877F2; }
+.social-links .line { background: #00B900; }
+.credit { font-size: 14px; opacity: 0.7; }
+
+/* ---------------- Modals ---------------- */
+.modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); backdrop-filter: blur(4px); display: flex; justify-content: center; align-items: center; z-index: 1000; }
+.modal-content { background: var(--white); width: 90%; max-width: 400px; padding: 30px; border-radius: 30px; text-align: center; position: relative; border: 3px dashed var(--dark-pink); }
+.dark-modal { background: rgba(0,0,0,0.8); }
+.close-btn { position: absolute; top: 15px; right: 20px; font-size: 24px; cursor: pointer; color: var(--dark-pink); font-weight: bold; }
+.white-btn { color: white; top: 20px; right: 30px; font-size: 40px; }
+#modal-img-display { max-width: 90%; max-height: 80vh; border-radius: 20px; border: 4px solid var(--white); }
+
+.input-cute { width: 100%; padding: 12px; border: 2px solid var(--dark-pink); border-radius: 15px; outline: none; text-align: center; font-size: 16px; }
+.error-msg { color: red; font-size: 14px; margin-top: 5px; }
+
+/* ---------------- Admin System ---------------- */
+.admin-login-icon { position: fixed; bottom: 20px; right: 20px; background: var(--white); border: 2px solid var(--dark-pink); border-radius: 50%; width: 45px; height: 45px; font-size: 20px; cursor: pointer; z-index: 500; }
+.admin-edit-btn { position: absolute; top: 5px; right: 5px; background: rgba(255,255,255,0.9); border: none; border-radius: 50%; width: 30px; height: 30px; cursor: pointer; color: var(--dark-pink); display: none; }
+
+/* เมื่อเปิดโหมด Admin */
+body.admin-mode .admin-edit-btn { display: block; }
+body.admin-mode [contenteditable="true"] { border-bottom: 2px dashed #ccc; outline: none; background: rgba(255,255,255,0.5); }
