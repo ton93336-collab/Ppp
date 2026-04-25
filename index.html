@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NONIOAEY 🌸 | รับทำเว็บไซต์และป้ายไอดี</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="bg-decor bg-decor-1">☁️</div>
+    <div class="bg-decor bg-decor-2">✨</div>
+    <div class="bg-decor bg-decor-3">🌸</div>
+
+    <div class="main-wrapper">
+        <header class="header-card">
+            <div class="logo-area">
+                <h1>💖 NONIOAEY 💖</h1>
+                <p class="slogan">รับทำป้ายขายไอดี , ทำเว็บร้าน , ปล่อยเช่ารหัส , อื่นๆ</p>
+            </div>
+            
+            <nav class="nav-menu">
+                <button class="nav-btn active" onclick="switchPage('home', this)">🏠 หน้าแรก</button>
+                <button class="nav-btn" onclick="switchPage('web', this)">💻 งานเว็บ</button>
+                <button class="nav-btn" onclick="switchPage('id-banner', this)">🎨 ป้ายไอดี</button>
+                <button class="nav-btn" onclick="switchPage('decor', this)">🎀 บล็อกป้าย</button>
+                <button class="nav-btn" onclick="switchPage('rov', this)">🎮 ROV</button>
+                <button class="nav-btn" onclick="switchPage('idv', this)">🕵️ Identity V</button>
+                <button class="nav-btn" onclick="switchPage('forms', this)">📝 กลุ่มฟอร์ม</button>
+                <button class="nav-btn" onclick="switchPage('courses', this)">📚 คอร์สสอนทำเว็บ</button>
+                <button class="nav-btn" onclick="switchPage('info', this)">❓ FAQ & สั่งซื้อ</button>
+            </nav>
+        </header>
+
+        <main class="content-container">
+
+            <section id="home" class="page active">
+                <div class="kawaii-box center-text">
+                    <img src="https://placehold.co/150x150/ffb6c1/fff?text=Logo" id="shop-logo" class="shop-logo" alt="Logo">
+                    <button class="admin-edit-btn" onclick="triggerUpload('shop-logo')"><i class="fa-solid fa-camera"></i></button>
+                    <h2>Welcome to NONIOAEY! 🌸</h2>
+                    <p>ยินดีต้อนรับสู่ร้านของเราค่ะ เลือกดูผลงานจากเมนูด้านบนได้เลยนะคะ 💕</p>
+                </div>
+            </section>
+
+            <section id="web" class="page hidden">
+                <div class="kawaii-box">
+                    <h2 class="title-decor">💻 งานเว็บ</h2>
+                    <p class="summary-box"><b>สังเขป :</b> รับทำเว็บไซต์ลิงค์ร้าน มีทั้งเทมเพลตให้เลือกเเละงานสั่งทำพิเศษ สามารถสอบถามได้ราคาเริ่มต้นที่ 69 บาท</p>
+                    
+                    <div class="rate-grid">
+                        <div class="rate-card">
+                            <h3>🎀 เรทราคาเว็บ</h3>
+                            <ul>
+                                <li>เว็บโอนเงิน <b>69</b> บาท</li>
+                                <li>เว็บตัวอย่างผลงาน <b>109</b> บาท</li>
+                                <li>เว็บรายละเอียดต่างๆ <b>159</b> บาท</li>
+                                <li>เว็บตัวอย่างผลงาน + รายละเอียดต่างๆ <b>209</b> บาท</li>
+                            </ul>
+                            <p class="small-text">* เว็บอื่นๆสามารถส่งรายละเอียดมาสอบถามราคาได้</p>
+                        </div>
+                        <div class="rate-card bg-cream">
+                            <h3>✨ ราคาบวกเพิ่ม</h3>
+                            <ul>
+                                <li>เเก้ฟรี 1 ครั้งก่อนส่งลิงค์ หลังส่งลิงค์เเก้จุดละ <b>5</b> บาท</li>
+                                <li>รูปที่ 1 - 3 ใส่ฟรี เพิ่มรูป รูปละ <b>10</b> บาท</li>
+                                <li>รองาน 4 - 8 ชั่วโมง หากคิวเยอะจะเเจ้งก่อน</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="title-decor mt-20">ผลงาน (กดดูตัวอย่าง)</h3>
+                    <div class="gallery" id="gallery-web">
+                        <div class="gallery-item">
+                            <div class="img-wrapper">
+                                <img src="https://placehold.co/300x200/ffe4e1/d87093?text=Web+1" id="img-web-1" alt="งานเว็บ">
+                                <button class="admin-edit-btn" onclick="triggerUpload('img-web-1')"><i class="fa-solid fa-camera"></i></button>
+                            </div>
+                            <h4 contenteditable="false" class="edit-text">เว็บโอนเงิน</h4>
+                            <button class="btn-link" onclick="openLinkModal('เว็บโอนเงิน', 'https://example.com/web1')">ดูตัวอย่าง</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="id-banner" class="page hidden">
+                <div class="kawaii-box">
+                    <h2 class="title-decor">🎨 ป้ายไอดี</h2>
+                    <p class="summary-box"><b>สังเขป :</b> รับทำป้ายขายไอดี</p>
+                    
+                    <div class="rate-grid">
+                        <div class="rate-card">
+                            <h3>🎀 เรทราคา (𝖲𝗄𝗂𝗇 𝖱𝖺𝗍𝖾)</h3>
+                            <ul>
+                                <li>1 - 100 สกิน ﹕สกินละ <b>0.50</b></li>
+                                <li>100+ สกิน ﹕สกินละ <b>1.00</b></li>
+                            </ul>
+                            <h3 class="mt-10">✨ 𝖮𝗍𝗁𝖾𝗋𝗌</h3>
+                            <ul>
+                                <li>หัวป้าย ﹕ <b>35.-</b></li>
+                                <li>ป้ายไฟ ﹕ <b>2.-</b> / ชิ้น</li>
+                                <li>ประดับ ﹕ <b>0.50</b> / ชิ้น</li>
+                            </ul>
+                        </div>
+                        <div class="rate-card bg-cream">
+                            <h3>ข้อตกลง</h3>
+                            <ul>
+                                <li>เเก้ฟรี 1 ครั้งก่อนส่งงาน หลังส่งงานเเก้จุดละ <b>5</b> บาท</li>
+                                <li>รองาน 4 - 8 ชั่วโมง หากคิวเยอะจะเเจ้งก่อน</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="title-decor mt-20">ผลงาน (กดเพื่อขยายรูป)</h3>
+                    <div class="gallery" id="gallery-id">
+                        <div class="gallery-item">
+                            <div class="img-wrapper zoom-cursor">
+                                <img src="https://placehold.co/300x300/ffe4e1/d87093?text=Banner+1" id="img-id-1" alt="ป้ายไอดี" onclick="openImageModal(this.src)">
+                                <button class="admin-edit-btn" onclick="triggerUpload('img-id-1')"><i class="fa-solid fa-camera"></i></button>
+                            </div>
+                            <h4 contenteditable="false" class="edit-text">ป้ายสกิน 50+</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="decor" class="page hidden">
+                <div class="kawaii-box">
+                    <h2 class="title-decor">🎀 กลุ่มบล็อกป้ายเเละของตกเเต่ง</h2>
+                    <div class="gallery" id="gallery-decor">
+                        <div class="gallery-item">
+                            <div class="img-wrapper">
+                                <img src="https://placehold.co/300x200/ffe4e1/d87093?text=Decor+1" id="img-decor-1">
+                                <button class="admin-edit-btn" onclick="triggerUpload('img-decor-1')"><i class="fa-solid fa-camera"></i></button>
+                            </div>
+                            <h4 contenteditable="false" class="edit-text">ของตกแต่ง A</h4>
+                            <button class="btn-link" onclick="openLinkModal('ของตกแต่ง A', 'https://example.com/decor1')">ดูตัวอย่าง</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="rov" class="page hidden">
+                <div class="kawaii-box">
+                    <h2 class="title-decor">🎮 กลุ่ม ROV</h2>
+                    <div class="gallery" id="gallery-rov">
+                        <div class="gallery-item">
+                            <div class="img-wrapper">
+                                <img src="https://placehold.co/300x200/ffe4e1/d87093?text=ROV+1" id="img-rov-1">
+                                <button class="admin-edit-btn" onclick="triggerUpload('img-rov-1')"><i class="fa-solid fa-camera"></i></button>
+                            </div>
+                            <h4 contenteditable="false" class="edit-text">งาน ROV 1</h4>
+                            <button class="btn-link" onclick="openLinkModal('งาน ROV 1', 'https://example.com/rov1')">ดูตัวอย่าง</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="idv" class="page hidden">
+                <div class="kawaii-box">
+                    <h2 class="title-decor">🕵️ กลุ่ม Identity V</h2>
+                    <div class="gallery" id="gallery-idv">
+                        <div class="gallery-item">
+                            <div class="img-wrapper">
+                                <img src="https://placehold.co/300x200/ffe4e1/d87093?text=IDV+1" id="img-idv-1">
+                                <button class="admin-edit-btn" onclick="triggerUpload('img-idv-1')"><i class="fa-solid fa-camera"></i></button>
+                            </div>
+                            <h4 contenteditable="false" class="edit-text">งาน IDV 1</h4>
+                            <button class="btn-link" onclick="openLinkModal('งาน IDV 1', 'https://example.com/idv1')">ดูตัวอย่าง</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="forms" class="page hidden">
+                <div class="kawaii-box">
+                    <h2 class="title-decor">📝 กลุ่มฟอร์ม</h2>
+                    <div class="gallery" id="gallery-forms">
+                        <div class="gallery-item">
+                            <div class="img-wrapper">
+                                <img src="https://placehold.co/300x200/ffe4e1/d87093?text=Form+1" id="img-form-1">
+                                <button class="admin-edit-btn" onclick="triggerUpload('img-form-1')"><i class="fa-solid fa-camera"></i></button>
+                            </div>
+                            <h4 contenteditable="false" class="edit-text">ฟอร์มแบบ A</h4>
+                            <button class="btn-link" onclick="openLinkModal('ฟอร์มแบบ A', 'https://example.com/form1')">ดูตัวอย่าง</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="courses" class="page hidden">
+                <div class="kawaii-box">
+                    <h2 class="title-decor">📚 กลุ่มคอร์สสอนทำเว็บ</h2>
+                    <div class="gallery" id="gallery-course">
+                        <div class="gallery-item">
+                            <div class="img-wrapper">
+                                <img src="https://placehold.co/300x200/ffe4e1/d87093?text=Course+1" id="img-course-1">
+                                <button class="admin-edit-btn" onclick="triggerUpload('img-course-1')"><i class="fa-solid fa-camera"></i></button>
+                            </div>
+                            <h4 contenteditable="false" class="edit-text">คอร์สพื้นฐาน</h4>
+                            <button class="btn-link" onclick="openLinkModal('คอร์สพื้นฐาน', 'https://example.com/course1')">ดูตัวอย่าง</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="info" class="page hidden">
+                <div class="kawaii-box">
+                    <h2 class="title-decor">❓ ข้อสงสัย (FAQ)</h2>
+                    <div class="info-list">
+                        <p><b>Q: สั่งงานผ่านช่องทางไหน?</b><br>A: สามารถติดต่อได้ทาง Facebook หรือ Line ด้านล่างเว็บเลยค่ะ</p>
+                        <p><b>Q: รองานนานไหม?</b><br>A: ปกติ 4-8 ชั่วโมง หากคิวเยอะจะแจ้งก่อนค่ะ</p>
+                        <p><b>Q: แก้ไขงานได้กี่ครั้ง?</b><br>A: แก้ฟรี 1 ครั้งก่อนส่งงานจริงค่ะ</p>
+                    </div>
+
+                    <h2 class="title-decor mt-20">🛒 วิธีสั่งซื้อ (How to Order)</h2>
+                    <div class="info-list bg-cream">
+                        <p>1. เลือกรูปแบบงานที่ต้องการ</p>
+                        <p>2. ทักแชทพร้อมส่งบรีฟงาน</p>
+                        <p>3. โอนเงินยืนยันคิว</p>
+                        <p>4. รอรับงานสวยๆ ได้เลยค่ะ 💕</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer-card">
+            <h3>ติดต่อเรา 🌸</h3>
+            <div class="social-links">
+                <a href="https://www.facebook.com/share/1De6NiueGU/?mibextid=wwXIfr" target="_blank" class="fb"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                <a href="https://line.me/ti/p/xnh050s5VP" target="_blank" class="line"><i class="fa-brands fa-line"></i> Line</a>
+            </div>
+            <p class="credit">design. @NONIOAEY</p>
+        </footer>
+    </div>
+
+    <button class="admin-login-icon" onclick="openAdminModal()">⚙️</button>
+
+    <div id="modal-link" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-link')">&times;</span>
+            <h3 id="modal-link-title" class="modal-title">ชื่องาน</h3>
+            <p>คลิกปุ่มด้านล่างเพื่อไปยังหน้าตัวอย่างค่ะ 🎀</p>
+            <a id="modal-link-url" href="#" target="_blank" class="btn-link mt-10" style="display: inline-block;">🔗 ไปยังลิงก์</a>
+        </div>
+    </div>
+
+    <div id="modal-image" class="modal hidden dark-modal">
+        <span class="close-btn white-btn" onclick="closeModal('modal-image')">&times;</span>
+        <img id="modal-img-display" src="" alt="Zoomed">
+    </div>
+
+    <div id="modal-admin" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-admin')">&times;</span>
+            <h3 class="modal-title">เข้าสู่ระบบหลังบ้าน 🔐</h3>
+            <p style="font-size: 14px; margin-bottom: 10px;">(รหัสผ่านเพื่อแก้ไขรูปภาพและข้อความ)</p>
+            <input type="password" id="admin-pass" placeholder="ใส่รหัสผ่าน..." class="input-cute">
+            <p id="admin-error" class="error-msg hidden">รหัสผ่านไม่ถูกต้อง!</p>
+            <button class="btn-link mt-10" onclick="checkAdmin()">เข้าสู่ระบบ</button>
+        </div>
+    </div>
+
+    <input type="file" id="file-uploader" accept="image/*" style="display:none;" onchange="handleImageUpload(event)">
+
+    <script src="script.js"></script>
+</body>
+</html>
